@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <label for="remember_me">Remember Me</label>
+        <input type="checkbox" id="remember_me" name="remember_me">
+    </div>
+    <div>
+        <a href="{% url 'password_reset' %}">Forgot Password?</a>
+    </div>
+    <button type="submit">Login</button>
+</form>
